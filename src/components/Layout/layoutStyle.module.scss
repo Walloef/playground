@@ -1,0 +1,32 @@
+%layout {
+  max-width: var(--max-width);
+  padding: 0 var(--gap);
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  background: var(--surface1);
+  box-shadow: var(--shadow-2);
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 0.1rem;
+    bottom: -0.1rem;
+    width: 100%;
+    background: var(--border);
+  }
+}
+
+.nav {
+  @extend %layout;
+  display: flex;
+  align-items: center;
+  height: 6.4rem;
+}
+
+.main {
+  @extend %layout;
+  padding-block-start: var(--gap);
+}
